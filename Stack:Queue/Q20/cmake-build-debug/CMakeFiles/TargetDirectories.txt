@@ -1,0 +1,3 @@
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q20/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q20/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q20/cmake-build-debug/CMakeFiles/Q20.dir
