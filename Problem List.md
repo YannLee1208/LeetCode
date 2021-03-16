@@ -13,6 +13,10 @@
 | 86     | Partition LinkedList     | LinkedList             |
 | 92     | Reverse LinedList 2      | LinkedList/Recursive   |
 | 94     | BST Inorder              | Stack                  |
+| 102    | BST level order          | Queue                  |
+| 103    | BST Zigzag level order   | Queue                  |
+| 107    | BST level order 2        | Queue                  |
+| 199    | BST Right Side view      | Queue                  |
 | 143    | Reorder List             | LinkedList             |
 | 144    | BST Preorder             | Stack/Recrusive        |
 | 145    | BST Postorder            | Stack                  |
