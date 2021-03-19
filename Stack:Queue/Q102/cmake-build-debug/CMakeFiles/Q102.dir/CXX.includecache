@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q102/Dlist.h
+List.h
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q102/List.h
+iostream
+-
+
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q102/List.h
+
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q102/main.cpp
+Dlist.h
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q102/Dlist.h
+iostream
+-
+

@@ -47,7 +47,7 @@ public:
     }
 };
 
-int main() {
+int main01() {
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
