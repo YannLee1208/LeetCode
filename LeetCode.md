@@ -181,12 +181,6 @@
 
 
 
-
-
-
-
-
-
 ### 328 Odd Even LinkedList
 
 
@@ -194,10 +188,6 @@
 
 
 ### 445 Add 2 Nums 2
-
-
-
-
 
 
 
@@ -226,6 +216,9 @@
 * **队列实现 广度优先遍历**
   
   * Q102 
+  * **广度优先遍历可以每层单独遍历** Q199
+    * 每次记录size
+    * 然后for size 取出，并push进下一层，结束即遍历了这一层
   
 * 队列实现 **图的最短路径**
 
@@ -433,7 +426,11 @@
 
 ### Q199 BST Right Side view 
 
-
+* 问题描述
+  * 站在一个BST的右侧看，按顺序打印出所有的节点
+* 思路
+  * 因为是DFS，所以使用队列
+  * **使用队列的每层单独遍历，每次记录q的size，然后for size并push，即遍历了每一层**
 
 
 
@@ -487,5 +484,117 @@
 
 
 
+## Recursive
 
 
+
+### 技巧
+
+* 递归的内容
+  1. 终止条件
+  2. 递归过程
+
+
+
+### Q100 Same Tree
+
+
+
+### Q101 Symmetric Tree
+
+
+
+
+
+### Q104 Max Depth of BST
+
+* 问题描述
+  * 求二叉树的最大深度
+* 思路
+  * 使用递归，返回左右子树的max depth的max + 1
+
+
+
+
+
+### Q110 Balanced Binary Tree
+
+
+
+
+
+### Q111 Minimum Depth of Binary Tree
+
+* 问题描述
+  * 求二叉树的最低深度
+  * **最小深度是从根节点到 叶子节点 的最小距离**
+* 思路
+  * **与104求最大深度的区别**
+    * 最大深度时不需要考虑只有单边的问题，即另一边实际上并不是一个深度，因为不是叶子节点
+    * **最小深度需要判断是否是叶子节点**
+  * **终止条件改变**
+    * 分别获得 ldepth 和 rdepth，如果为0代表是nullptr而不是叶子节点，则返回另一个 + 1
+
+
+
+### Q112 Path Sum
+
+* 问题描述
+
+  * 求解在一个二叉树上是否存在一个从 **根到叶子节点** 的路径，和为sum
+
+* 思路
+
+  1. ```c++
+     if ( root == nullptr)
+       return sum == 0;
+     
+     if ( hasPath(root->left, sum - root->val))
+       return true;
+     
+     if (hasPath(root->right, sum - root->val)
+         return true;
+     return false
+     ```
+
+     * **终止条件错误，这样的话不是到叶子节点的也可能对，比如root就等于sum**
+     * **root == nullptre 这个终止条件忽视了父亲节点是否为叶子节点**
+
+  2. ```c++
+     if ( root == nullptr)
+       return false;
+     
+     if (root->left == nullptr && root->right == nullptr)
+       return root->val == sum;
+     
+     if ( hasPath(root->left, sum - root->val))
+       return true;
+     
+     if (hasPath(root->right, sum - root->val)
+         return true;
+     return false
+     ```
+
+     * 这样终止条件改为了root的左右孩子都为空
+
+
+
+### Q222 Count Complete Tree Nodes
+
+
+
+### Q226 Invert  BT
+
+Max Howell : **Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.**
+
+* 问题描述
+  * 反转一颗二叉树
+* 思路
+  * 分别翻转左右子树
+  * 然后再交换（swap）左右子树的值（指针）
+
+
+
+
+
+### Q404 Sum of left leaves

@@ -14,9 +14,15 @@
 | 86     | Partition LinkedList     | LinkedList             |
 | 92     | Reverse LinedList 2      | LinkedList/Recursive   |
 | 94     | BST Inorder              | Stack                  |
+| 100    | Same Tree                | Recursive              |
+| 101    | Symmetric Tree           | Recursive              |
 | 102    | BST level order          | Queue                  |
 | 103    | BST Zigzag level order   | Queue                  |
+| 104    | Max BT Depth             | Recursive              |
 | 107    | BST level order 2        | Queue                  |
+| 110    | Balanced Tree            | Recursive              |
+| 111    | Minimum Depth of BT      | Recursive              |
+| 112    | Path Sum                 | Recursive              |
 | 126    | Word Ladder 2            | Queue/Graph            |
 | 127    | Word Ladder              | Queue/Graph            |
 | 143    | Reorder List             | LinkedList             |
@@ -27,10 +33,13 @@
 | 199    | BST Right Side view      | Queue                  |
 | 203    | Remove Elements          | LinkedList             |
 | 206    | Reverse LinkedList       | LinkedList             |
+| 222    | Count complete Nodes     | Recursive              |
+| 226    | Invert BT                | Recursive              |
 | 243    | Palindrome LinkedList    | LinkedList             |
 | 279    | Perfect Squares          | Queue/Graph            |
 | 328    | Odd Even LinkedList      | LinkedList             |
 | 347    | TopK frequency           | PriorityQueue          |
 | 341    | Flattern Nested          | Stack                  |
+| 404    | Sum of left leaves       | Recursive              |
 | 445    | Add 2 Nums 2             | LinkedList             |
 
