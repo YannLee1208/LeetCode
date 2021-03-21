@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apple/Desktop/LeetCode/Recursive/Q437/main.cpp
+iostream
+-
+queue
+/Users/apple/Desktop/LeetCode/Recursive/Q437/queue
+

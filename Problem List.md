@@ -23,8 +23,10 @@
 | 110    | Balanced Tree            | Recursive              |
 | 111    | Minimum Depth of BT      | Recursive              |
 | 112    | Path Sum                 | Recursive              |
+| 113    | Path Sum2                | Recursive              |
 | 126    | Word Ladder 2            | Queue/Graph            |
 | 127    | Word Ladder              | Queue/Graph            |
+| 129    | SumRoot to leaf          | Recursive              |
 | 143    | Reorder List             | LinkedList             |
 | 144    | BST Preorder             | Stack/Recrusive        |
 | 145    | BST Postorder            | Stack                  |
@@ -36,10 +38,12 @@
 | 222    | Count complete Nodes     | Recursive              |
 | 226    | Invert BT                | Recursive              |
 | 243    | Palindrome LinkedList    | LinkedList             |
+| 257    | Binary Tree Paths        | Recursive              |
 | 279    | Perfect Squares          | Queue/Graph            |
 | 328    | Odd Even LinkedList      | LinkedList             |
 | 347    | TopK frequency           | PriorityQueue          |
 | 341    | Flattern Nested          | Stack                  |
 | 404    | Sum of left leaves       | Recursive              |
+| 437    | Path Sum3                | Recursive              |
 | 445    | Add 2 Nums 2             | LinkedList             |
 
