@@ -143,6 +143,33 @@ Q111/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Q111.dir/build.make CMakeFiles/Q111.dir/build
 .PHONY : Q111/fast
 
+Douyin.o: Douyin.cpp.o
+
+.PHONY : Douyin.o
+
+# target to build an object file
+Douyin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Q111.dir/build.make CMakeFiles/Q111.dir/Douyin.cpp.o
+.PHONY : Douyin.cpp.o
+
+Douyin.i: Douyin.cpp.i
+
+.PHONY : Douyin.i
+
+# target to preprocess a source file
+Douyin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Q111.dir/build.make CMakeFiles/Q111.dir/Douyin.cpp.i
+.PHONY : Douyin.cpp.i
+
+Douyin.s: Douyin.cpp.s
+
+.PHONY : Douyin.s
+
+# target to generate assembly for a file
+Douyin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Q111.dir/build.make CMakeFiles/Q111.dir/Douyin.cpp.s
+.PHONY : Douyin.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -179,6 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Q111"
+	@echo "... Douyin.o"
+	@echo "... Douyin.i"
+	@echo "... Douyin.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

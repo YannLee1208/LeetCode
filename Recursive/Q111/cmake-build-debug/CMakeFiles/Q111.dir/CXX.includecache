@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apple/Desktop/LeetCode/Recursive/Q111/Douyin.cpp
+vector
+/Users/apple/Desktop/LeetCode/Recursive/Q111/vector
+iostream
+/Users/apple/Desktop/LeetCode/Recursive/Q111/iostream
+

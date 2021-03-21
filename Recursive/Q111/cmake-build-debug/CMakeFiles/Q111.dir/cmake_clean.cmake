@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Q111.dir/Douyin.cpp.o"
   "CMakeFiles/Q111.dir/main.cpp.o"
   "Q111"
   "Q111.pdb"

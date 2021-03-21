@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q127/main.cpp
+iostream
+-
+vector
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q127/vector
+string
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q127/string
+unordered_set
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q127/unordered_set
+unordered_map
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q127/unordered_map
+queue
+/Users/apple/Desktop/LeetCode/Stack:Queue/Q127/queue
+

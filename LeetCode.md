@@ -317,11 +317,26 @@
 
 ### Q107 BST Level Order 2
 
+* 问题描述
+  * 从最后一层向上的层序遍历，并且返回 vector\<vector\<int>> 每个分别为每一层
+* 思路
+  1. 从上向下，再reverse一下
+  2. 从上向下，将每层的vector放入一个stack中，最后再从stack中pop
+
 
 
 ### Q127 Word Ladder
 
-
+* 问题描述
+  * 给定beginword和endword，和一个wordlist数组，找出来一条从beginword到endword的路径，求最小路径长度
+* 思路
+  * **图的最短路径问题**
+    * 如何构建图？
+      * 构建邻接表 unordered_map \<string, vector\<string>>，使用一个 '*' 作为过渡
+      * "hit" 相邻的有 "*it", "h\*t" , "hi\*"， 而"\*it"相邻添加上 "hit"
+    * BFS
+      * queue 存储 string和step
+      * 因为此处添加了一层 "*it" 作为过渡层，所以当真正找到时，返回的step是 step / 2 + 1. 因为beginword就是endword时算1步
 
 
 
