@@ -179,23 +179,37 @@
 
 
 
-
-
 ### 328 Odd Even LinkedList
 
+* 问题描述
 
+  * 链表偶节点在前，奇节点在后面
+
+* 思路
+
+  * 设立两个指针oddCur 和 evenCur
+
+  * ```c++
+     while (evenCur != nullptr) {
+                if (evenCur->next == nullptr) {
+                    break;
+                } else {
+                    oddCur->next = evenCur->next;
+                    oddCur = oddCur->next;
+    
+    
+                    evenCur->next = oddCur->next;
+                    evenCur = evenCur->next;
+                }
+            }
+    oddCur->next = evenHead;
+    ```
+
+    
 
 
 
 ### 445 Add 2 Nums 2
-
-
-
-
-
-
-
-
 
 
 
@@ -513,9 +527,24 @@
 
 ### Q100 Same Tree
 
+* 问题描述
+  * 判断两颗二叉树是否相等
+* 思路
+  * 递归
+  * 判断当前节点val是否相等（要判断是否为空），再判断左子树，右子树
+
+
+
 
 
 ### Q101 Symmetric Tree
+
+* 问题
+  * 判断一棵树是否镜像对称
+* 思路
+  * 递归
+    * 类似于Q100，设立一个helper子函数，判断两个节点值相等
+    * `return l->val == r->val && helper(l->right, r->left) && helper(l->left, r>right);`
 
 
 
@@ -613,6 +642,8 @@
 
 
 ### Q222 Count Complete Tree Nodes
+
+
 
 
 
