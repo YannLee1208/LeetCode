@@ -40,3 +40,7 @@ public:
 
     }
 };
+
+int main(){
+    Solution().oddEvenList(new ListNode());
+}
