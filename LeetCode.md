@@ -114,7 +114,18 @@
 
 ### 148 Sort List
 
+* 问题
 
+  * 对链表排序 要求：` O(nlogn)` time and `O(1)` memory
+
+* 思路
+
+  * `O(nlogn)` ：mergeSort or quickSort or heapSort
+  * `O(1)`memory : mergeSort.  快排因为递归，空间复杂度为 `O(logn)` ， 而堆排序需要一个新的数组 `O(n)`
+  * **mergeSort**
+    * 
+
+  
 
 ### 203 Remove Elements
 
@@ -164,6 +175,14 @@
 
 ### 234 Palindrome LinkedList
 
+* 问题
+  * 判断一个LinkedList是否为 Palindrome
+* 思路
+  1. 遍历一遍统计length，然后使用stack 
+  2. **利用string，判断reverse(string) == string**
+
+
+
 
 
 ### 237 Delete Node 
@@ -196,16 +215,14 @@
                 } else {
                     oddCur->next = evenCur->next;
                     oddCur = oddCur->next;
-    
-    
                     evenCur->next = oddCur->next;
                     evenCur = evenCur->next;
-                }
-            }
-    oddCur->next = evenHead;
-    ```
-
-    
+               }
+           }
+       	oddCur->next = evenHead;
+     ```
+  
+  
 
 
 
@@ -563,7 +580,10 @@
 
 ### Q110 Balanced Binary Tree
 
-
+* 问题描述
+  * 判断是否为平衡树，即左右子树的高度差不超过1
+* 思路
+  * 递归求解左右子树的高度
 
 
 
@@ -698,4 +718,184 @@ Max Howell : **Google: 90% of our engineers use the software you wrote (Homebrew
 
     * 因为必须要区分开 包含和不包含的情况，否则**可能出现一个包含，下一个不包含，下一个又包含的情况，而使用两个递归分别处理的话，findPath单独处理了包含的，而主递归函数实际上是在处理不包含的**
 
+
+
+
+
+
+
+
+## 动态规划
+
+* 斐波那契数列
+  * f(n) = f(n-1) + f(n-2)
+  * 使用递归的话，有多次重复计算
+  * 设置一个memo数组，记录 f(i) **记忆化搜索**
+
+### 技巧
+
+* 递归与DP	
+
+  * 递归 + 记忆化搜索
+
+    * 自上而下解决问题
+    * **重叠子问题 且 最优子结构**
+      * 记忆化搜索 ： 自顶向下
+      * 动态规划：自底向上
+
+  * 动态规划 
+
+    * 自下而上解决问题
+
+    * ```
+      for i:
+      	memo[i] = memo[i-1] + memo[i-2];
+      ```
+
+  * 先把递归的树一下，从上到下，看一下下面最后都是到一样的问题
+  * **通过求子问题的解，能够构建出原问题的解**
+
+
+
+### Q62 Unique Paths
+
+* 问题
+
+  * 机器人从左上角，每次只有向右或者向下，求走到右下角有多少条路径
+
+* 思路
+
+  * dp
+
+    * 左上角开始，先把第一行和第一列填为1
+
+    * 然后 dp\[level][index] = dp\[level-1][index] + dp]\[level][index - 1]
+
+      
+
+
+
+### Q63 Unique Paths 2
+
+* 问题
+
+  * 在62的基础上，路径上可能有 obstacle
+
+* 思路
+
+  * dp
+
+    * 左上角开始，先把第一行和第一列填充
+
+      * **技巧**
+
+      * ```c++
+        for (int i = 1; i < m; ++i) {
+                    if (obs[i][0])
+                        dp[i][0] = 0;
+                    else
+                        dp[i][0] = dp[i-1][0];
+                }
+        ```
+
+    * 然后 判断 obs该处是否为1，不是则 dp\[level][index] = dp\[level-1][index] + dp]\[level][index - 1]
+
+
+
+
+
+### Q64 Minimum Path Sum
+
+* 问题
+  * 给出m * n 的矩阵，寻找一条左上到右下的路径，**每一个为非负整数**，使得沿路的数字和最小
+  * 每一步只能左移或者下移
+* 
+
+
+
+### Q70 Climbing Stairs
+
+* 问题
+  * 一个楼梯总共有n级台阶。每次可以上一个台阶，也可以两个，求爬上一共有多少方法
+* 思路
+  1. 递归
+     * f(n) = f(n - 1) + f(n - 2)
+  2. 动态规划
+     * 自底向上 
+
+
+
+### Q91 Decode Ways
+
+* 问题描述
+  * 给定一个字符串包含A-Z的字母，每一个字符可以和1-26数字对应，给出一个数字字符串，有多少种方法可以解析数字字符串
+  * 12 ： AB或L 返回2
+* 思路
+
+
+
+### Q120 Triangle
+
+* 问题
+  * 找一个triangle从上到下最小的和, 上一行为index i，则下一行index 只能为 i或 i + 1
+* 思路
+  * 动态规划 
+    * 使用一个 `vector<vector<int> > dp` ： **到第(i, j) 位置的最短路径**
+    * dp\[i][j] = min (dp\[i-1][j-1],  dp\[i-1][j] ) + triangle\[i][j] 
+    * 对于 j = 0 和 j = 当前层最后一个要特殊处理
+
+
+
+### Q279 Perfect Squares
+
+* 问题
+
+  * 给定一个数n，寻找最少的完全平方数和为n
+
+* 思路
+
+  * 从头开始设立一个 `vector<int>(n + 1, INT_MAX)`
+
+  * ```c++
+    for (int i = 2 ; i < n + 1; ++i) {
+                for (int j = 1; i - j * j >= 0 ; ++j) {
+                    dp[i] = min(1 + dp[i - j * j], dp[i]);
+        }
+    }
+    ```
+
     
+
+
+
+### Q343 Integer Break
+
+* 问题
+
+  * 给定一个正整数n，把其分割为多个数字的和，使其乘积最大，求分割方案。至少分成两个数，返回最大乘积
+
+* 思路
+
+  * 递归 + 记忆化搜索
+
+    * ```c++
+       for (int i = 1; i <= n - 1; ++i) {
+                  // 一定要注意此处 因为breakInteger是必须分成两部分的
+                  res = max(res, max (i * breakInteger(n - i), i * (n - i)) );
+       }
+      ```
+
+  * DP
+
+    * ```c++
+      for (int i = 2 ; i <= n; ++i) {
+        	for (int j = 1; j <= i - 1 ; ++j) {
+            	memo[i] = max(memo[i], max(j * (i - j), j * memo[i - j]));
+          }
+      }
+      ```
+
+      
+
+
+
