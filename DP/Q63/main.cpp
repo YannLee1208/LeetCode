@@ -46,3 +46,7 @@ public:
 
     }
 };
+
+int main(){
+
+}

@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apple/Desktop/LeetCode/DP/Q63/main.cpp
+iostream
+-
+vector
+/Users/apple/Desktop/LeetCode/DP/Q63/vector
+
